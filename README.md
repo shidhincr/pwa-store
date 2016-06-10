@@ -1,6 +1,6 @@
-# ng2-start
+# PWA Store
 
-This is a minimal setup to start creating an angular2 application with webpack.
+Mininal ~~PWA~~ (Still WIP, not yet ready) App using Angular 2 and webpack
 
 ### Instructions
 
@@ -15,8 +15,8 @@ Requirements
 Setup environment
 
 ```bash
-# cd into ng2-start
-cd ng2-start
+# cd into pwa-store
+cd pwa-store
 
 # Install dependencies
 npm install
