@@ -1,0 +1,14 @@
+<md-grid-list cols="2" rowHeight="10em" gutterSize="20px">
+  <md-grid-tile *ngFor="let item of items">
+    <md-card>
+      <md-card-header>
+        <md-card-title>{{ item.name }}</md-card-title>
+        <!--<md-card-subtitle>-&#45;&#45;</md-card-subtitle>-->
+      </md-card-header>
+      <!--<img md-card-image src="path/to/img.png">-->
+      <md-card-content>
+        <p>{{ item.description }}</p>
+      </md-card-content>
+    </md-card>
+  </md-grid-tile>
+</md-grid-list>

@@ -1,27 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprecated';
 
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { HeaderComponent } from './header/index';
-
-import {MD_TOOLBAR_DIRECTIVES} from '@angular2-material/toolbar';
-import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
+import { HeaderComponent } from './header/header.component';
 import {MD_SIDENAV_DIRECTIVES} from '@angular2-material/sidenav'
+import {MD_LIST_DIRECTIVES} from "@angular2-material/list/list";
 
 @Component({
   moduleId: module.id,
-  selector: 'app',
+  selector: 'pwa-app',
   directives: [
     ROUTER_DIRECTIVES,
-    MD_TOOLBAR_DIRECTIVES,
     MD_SIDENAV_DIRECTIVES,
-    MdIcon,
-    HeaderComponent
+    HeaderComponent,
+    MD_LIST_DIRECTIVES
   ],
-  styleUrls: [ './app.less' ],
+  styleUrls: [ './app.scss' ],
   templateUrl: './app.html',
-  providers: [MdIconRegistry
+  encapsulation: ViewEncapsulation.None
 })
 @RouteConfig([
   { path: '/home', component: HomeComponent, name: 'Home', useAsDefault: true },

@@ -1,20 +1,12 @@
 <section>
   <md-sidenav-layout fullscreen="true">
     <md-sidenav #nav mode="push">
-      <div class="row">
-        <a [routerLink]="['Home']">Home</a>
-      </div>
-      <div class="row">
-        <a [routerLink]="['About']">About</a>
-      </div>
+      <md-nav-list (click)="nav.close()">
+        <a md-list-item [routerLink]="['Home']">Home</a>
+        <a md-list-item [routerLink]="['About']">About</a>
+      </md-nav-list>
     </md-sidenav>
-    <md-toolbar color="primary">
-      <md-icon (click)="nav.open()">menu</md-icon>
-    </md-toolbar>
-    <pwa-header></pwa-header>
-    <h1 class="royalblue">ng2-start</h1>
-    <br>
-    <br><br>
+    <pwa-header [nav]="nav"></pwa-header>
     <router-outlet></router-outlet>
   </md-sidenav-layout>
 </section>
