@@ -5,3 +5,15 @@ md-card {
   flex: 1;
   align-self: stretch
 }
+md-grid-tile {
+  opacity: 1;
+  animation: fade 1s;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
