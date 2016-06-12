@@ -5,3 +5,7 @@ body {
 md-sidenav {
   width: 200px;
 }
+
+.active .md-list-item {
+  color: #4DB6AC;
+}
