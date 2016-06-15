@@ -5,7 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
 import {MD_SIDENAV_DIRECTIVES} from '@angular2-material/sidenav'
-import {MD_LIST_DIRECTIVES} from "@angular2-material/list/list";
+import {MD_LIST_DIRECTIVES} from '@angular2-material/list/list';
+import {DetailsComponent} from './details/details.component';
 
 @Component({
   moduleId: module.id,
@@ -22,6 +23,7 @@ import {MD_LIST_DIRECTIVES} from "@angular2-material/list/list";
 })
 @RouteConfig([
   { path: '/', component: HomeComponent, name: 'Home', useAsDefault: true },
+  { path: '/details/:id', component: DetailsComponent, name: 'Details'},
   { path: '/about', component: AboutComponent, name: 'About' }
 ])
 export class AppComponent implements OnInit {

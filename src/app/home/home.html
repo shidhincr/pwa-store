@@ -1,6 +1,6 @@
 <md-grid-list cols="2" rowHeight="10em" gutterSize="20px" class="pwa-home">
   <md-grid-tile *ngFor="let item of items">
-    <md-card>
+    <md-card (click)="navigateTo(item.id)">
       <md-card-header>
         <md-card-title>{{ item.name }}</md-card-title>
         <!--<md-card-subtitle>-&#45;&#45;</md-card-subtitle>-->

@@ -1,17 +1,21 @@
 [
   {
+    "id": 1,
     "name": "PWA 1",
     "description": "This is the first pwa app"
   },
   {
+    "id": 2,
     "name": "PWA 2",
     "description": "second pwa app"
   },
   {
+    "id": 3,
     "name": "PWA 3",
     "description": "looks good"
   },
   {
+    "id": 4,
     "name": "PWA 4",
     "description": "final app"
   }
