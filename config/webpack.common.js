@@ -1,7 +1,9 @@
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
+const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin').default;
 
 const util = require('./util');
 
@@ -58,6 +60,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       chunksSortMode: 'dependency'
+    }),
+    new ServiceWorkerWebpackPlugin({
+      entry: path.join(__dirname, '../sw.js')
     })
   ],
   devServer: {

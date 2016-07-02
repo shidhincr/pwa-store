@@ -2,8 +2,8 @@
   <md-sidenav-layout fullscreen="true">
     <md-sidenav #nav mode="push">
       <md-nav-list (click)="nav.close()">
-        <a md-list-item [routerLink]="['']" [class.active]="isCurrentRoute('')">Home</a>
-        <a md-list-item [routerLink]="['about']" [class.active]="isCurrentRoute('about')">About</a>
+        <a md-list-item [routerLink]="['']" [class.active]="isCurrentRoute('/')">Home</a>
+        <a md-list-item [routerLink]="['about']" [class.active]="isCurrentRoute('/about')">About</a>
       </md-nav-list>
     </md-sidenav>
     <pwa-header [nav]="nav"></pwa-header>

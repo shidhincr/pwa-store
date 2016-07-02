@@ -20,11 +20,16 @@ import {HeaderComponent} from './header/header.component';
 
 export class AppComponent implements OnInit {
   currentUrl : string;
+  sub: any;
   constructor(private _router: Router ){}
 
   ngOnInit() {
     console.log('App loaded!!');
-    this.currentUrl = this._router.url;
+    this.sub = this._router.events.subscribe( data => this.currentUrl = data.url );
+  }
+
+  ngOnDestroy(){
+    this.sub && this.sub();
   }
 
   isCurrentRoute(route : string) : boolean {

@@ -6,6 +6,6 @@ md-sidenav {
   width: 200px;
 }
 
-.active .md-list-item {
+a[md-list-item].active .md-list-item {
   color: #4DB6AC;
 }
