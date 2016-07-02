@@ -19,7 +19,7 @@ module.exports = {
       '@angular/core',
       '@angular/http',
       '@angular/platform-browser-dynamic',
-      '@angular/router-deprecated',
+      '@angular/router',
       '@angular2-material/button',
       '@angular2-material/card',
       '@angular2-material/checkbox',

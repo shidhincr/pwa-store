@@ -1,6 +1,6 @@
 'use strict';
 import {Component, OnInit} from '@angular/core';
-import {RouteParams} from '@angular/router-deprecated';
+import {ActivatedRoute} from '@angular/router';
 import {MD_CARD_DIRECTIVES} from "@angular2-material/card/card";
 import {ItemService} from "../items/item.service";
 
@@ -43,12 +43,12 @@ import {ItemService} from "../items/item.service";
 export class DetailsComponent implements OnInit {
   itemData:any = {};
 
-  constructor(private _routeParams:RouteParams,
+  constructor(private _route:ActivatedRoute,
               private _itemService:ItemService) {
   }
 
   ngOnInit():any {
-    let id = Number(this._routeParams.get('id'));
+    let id = Number(this._route.snapshot.params['id']);
     this._itemService.getItems().then((data)=> {
       this.itemData = data.filter((item)=>item.id === id)[0];
     });
