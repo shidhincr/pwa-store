@@ -1,5 +1,7 @@
 # PWA Store
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/shidhincr/pwa-store.svg)](https://greenkeeper.io/)
+
 Mininal ~~PWA~~ (Still WIP, not yet ready) App using Angular 2 and webpack
 
 ### Instructions
